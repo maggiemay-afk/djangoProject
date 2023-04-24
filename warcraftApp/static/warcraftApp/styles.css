@@ -1,0 +1,13 @@
+
+body {
+    text-align: center;
+    font-family: Courier New, monospace;
+    background-color: #795C34;
+
+}
+
+img {
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+}
