@@ -28,3 +28,7 @@ def survey(request):
         form = SurveyForm()
 
     return render(request, "warcraftApp/survey.html", {"form": form})
+
+
+def thanks(request):
+    return render(request, "warcraftApp/thanks.html")

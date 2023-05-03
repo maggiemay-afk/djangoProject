@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'warcraftApp/styles.css' %}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'history' %}">History</a>
+            <a href="{% url 'survey' %}">Survey</a>
+            <a href="{% url 'about' %}">About</a>
+        </div>
+    </nav>
+
+    <h1>Thank you for completing the survey!</h1>
+    <p>Your response has been submitted</p>
+
+</body>
+
+<footer>
+</footer>
+
+</html>
