@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'warcraftApp/styles.css' %}">
+</head>
+<body>
+
+    <h1>Greetings from Azeroth</h1>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'history' %}">History</a>
+            <a href="{% url 'survey' %}">Survey</a>
+            <a href="{% url 'about' %}">About</a>
+        </div>
+    </nav>
+
+    <form method="POST" action="{% url 'survey' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+
+<footer>
+</footer>
+
+</html>

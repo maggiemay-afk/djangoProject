@@ -1,17 +1,30 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponseRedirect
+from django.shortcuts import render, redirect
+from .forms import SurveyForm
 
 
 # Create your views here.
 def index(request):
     return render(request, "warcraftApp/index.html")
-    # return HttpResponse("Hello World. You're at the Warcraft index")
 
 
 def about(request):
-    return HttpResponse("You're at the about page")
+    return render(request, "warcraftApp/about.html")
 
 
 def history(request):
     return render(request, "warcraftApp/history.html")
-    # return HttpResponse("you're at the history page")
+
+
+def survey(request):
+    if request.method == "POST":
+        form = SurveyForm(request.POST, request.FILES)
+
+        if form.is_valid():
+            form.save()
+        return redirect(index)
+
+    else:
+        form = SurveyForm()
+
+    return render(request, "warcraftApp/survey.html", {"form": form})

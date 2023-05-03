@@ -8,38 +8,123 @@
 </head>
 <body>
 
+    <h1>Greetings from Azeroth</h1>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'history' %}">History</a>
+            <a href="{% url 'survey' %}">Survey</a>
+            <a href="{% url 'about' %}">About</a>
+        </div>
+    </nav>
+
     <div class="timeline">
-        <div class="left timeline">
-            <div class="timeline content">
+        <div class="container left">
+            <div class="content">
                 <h2>2022</h2>
                 <p>Dragonflight is released</p>
-                <h2>2018</h2>
-                <p>Battle for Azeroth is released</p>
-                <h2>2014</h2>
-                <p>Warlords of Draenor is released</p>
-                <h2>2010</h2>
-                <p>Cataclysm is released</p>
-                <h2>2007</h2>
-                <p>The Burning Crusade is released</p>
+            </div>
+            <div class="photo">
+               <img src="{% static 'warcraftApp/dragonIslesMap.PNG' %}">
             </div>
         </div>
 
-        <div class="right timeline">
-            <div class="timeline content">
+        <div class="container right">
+            <div class="content">
                 <h2>2020</h2>
                 <p>Shadowlands is released</p>
+            </div>
+            <div class="photo">
+               <img src="{% static 'warcraftApp/shadowlandsMap.PNG' %}">
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <h2>2018</h2>
+                <p>Battle for Azeroth is released</p>
+            </div>
+             <div class="photo">
+               <img src="{% static 'warcraftApp/kulTirasMap.PNG' %}">
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
                 <h2>2016</h2>
                 <p>Legion is released</p>
+            </div>
+            <div class="photo">
+               <img src="{% static 'warcraftApp/brokenIslesMap.PNG' %}">
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <h2>2014</h2>
+                <p>Warlords of Draenor is released</p>
+            </div>
+            <div class="photo">
+               <img src="{% static 'warcraftApp/draenorMap.PNG' %}">
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
                 <h2>2012</h2>
                 <p>Mists of Pandaria is released</p>
+            </div>
+            <div class="photo">
+               <img src="{% static 'warcraftApp/pandariaMap.PNG' %}">
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <h2>2010</h2>
+                <p>Cataclysm is released</p>
+            </div>
+            <div class="photo">
+               <img src="{% static 'warcraftApp/maelstromMap.PNG' %}">
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
                 <h2>2008</h2>
                 <p>Wrath of the Lich King is released</p>
+            </div>
+            <div class="photo">
+               <img src="{% static 'warcraftApp/northrendMap.PNG' %}">
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <h2>2007</h2>
+                <p>The Burning Crusade is released</p>
+            </div>
+            <div class="photo">
+               <img src="{% static 'warcraftApp/outlandMap.PNG' %}">
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
                 <h2>2004</h2>
                 <p>WoW (Classic) is released</p>
+            </div>
+            <div class="photo">
+               <img src="{% static 'warcraftApp/kalimdorMap.PNG' %}">
             </div>
         </div>
 
     </div>
 
 </body>
+
+<footer>
+</footer>
+
 </html>

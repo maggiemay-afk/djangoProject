@@ -21,6 +21,5 @@ from warcraftApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("warcraftApp/", include(warcraftApp.urls))
-
+    path('', include(warcraftApp.urls))
 ]
