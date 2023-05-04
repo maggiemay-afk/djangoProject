@@ -12,8 +12,4 @@ class SurveyForm(ModelForm):
     class Meta:
         model = SurveyModel
         fields = ['character_name', 'fav_zone', 'image_description', 'image']
-        widgets = {
-            'character_name' : TextInput(attrs={
 
-            })
-        }

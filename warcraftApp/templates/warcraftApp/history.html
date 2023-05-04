@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="{% static 'warcraftApp/styles.css' %}">
+
 </head>
 <body>
 
@@ -21,9 +22,14 @@
 
     <div class="timeline">
         <div class="container left">
-            <div class="content">
-                <h2>2022</h2>
-                <p>Dragonflight is released</p>
+            <div class="content" onclick="swapHistory('dragon')">
+                <h2 id="h-dragon">2022</h2>
+                <p id="expac-dragon">Dragonflight is released</p>
+                <p id="desc-dragon">The age of Dragons! WoW's most recent expansion
+                    brings players to the home of dragons and a new zone, the Dragon Isles.
+                    Maybe some of Deathwing's corruption and destruction remains?
+                    Players will also get a new playable race and class combination: the Dracthyr Evoker.
+                </p>
             </div>
             <div class="photo">
                <img src="{% static 'warcraftApp/dragonIslesMap.PNG' %}">
@@ -31,9 +37,13 @@
         </div>
 
         <div class="container right">
-            <div class="content">
-                <h2>2020</h2>
-                <p>Shadowlands is released</p>
+            <div class="content" onclick="swapHistory('shadow')">
+                <h2 id="h-shadow">2020</h2>
+                <p id="expac-shadow">Shadowlands is released</p>
+                <p id="desc-shadow">The newest villain emerges, meet Zovaal, aka "The Jailer".
+                    Zovaal has been working with another returning villain from Azeroth, Sylvanas Windrunner.
+                    Players travel to the realm of death, a new zone, the Shadowlands.
+                </p>
             </div>
             <div class="photo">
                <img src="{% static 'warcraftApp/shadowlandsMap.PNG' %}">
@@ -41,9 +51,13 @@
         </div>
 
         <div class="container left">
-            <div class="content">
-                <h2>2018</h2>
-                <p>Battle for Azeroth is released</p>
+            <div class="content" onclick="swapHistory('bfa')">
+                <h2 id="h-bfa">2018</h2>
+                <p id="expac-bfa">Battle for Azeroth is released</p>
+                <p id="desc-bfa">The Alliance and Horde, no longer bound by a common enemy, have begun fighting again.
+                    BFA introduces the new zones Zandalar and Kul Tiras, as well as the Allied Races, which consist of
+                    5 playable races for both Alliance and Horde factions.
+                </p>
             </div>
              <div class="photo">
                <img src="{% static 'warcraftApp/kulTirasMap.PNG' %}">
@@ -51,9 +65,13 @@
         </div>
 
         <div class="container right">
-            <div class="content">
-                <h2>2016</h2>
-                <p>Legion is released</p>
+            <div class="content" onclick="swapHistory('legion')">
+                <h2 id="h-legion">2016</h2>
+                <p id="expac-legion">Legion is released</p>
+                <p id="desc-legion">Legion stars the infamous anti-hero Illidan Stormrage,
+                    and the returning villain, Gul'dan. Players explore the new zones, Broken Isles and Argus,
+                    and we see a new playable class, demon hunters.
+                </p>
             </div>
             <div class="photo">
                <img src="{% static 'warcraftApp/brokenIslesMap.PNG' %}">
@@ -61,9 +79,13 @@
         </div>
 
         <div class="container left">
-            <div class="content">
-                <h2>2014</h2>
-                <p>Warlords of Draenor is released</p>
+            <div class="content" onclick="swapHistory('wod')">
+                <h2 id="h-wod">2014</h2>
+                <p id="expac-wod">Warlords of Draenor is released</p>
+                <p id="desc-wod">Warlords of Draenor takes players to a new Zone, Draenor.
+                    We also see a new villain, Gul'dan, and this won't be the last time
+                    players encounter the first orcish warlock.
+                </p>
             </div>
             <div class="photo">
                <img src="{% static 'warcraftApp/draenorMap.PNG' %}">
@@ -71,9 +93,14 @@
         </div>
 
         <div class="container right">
-            <div class="content">
-                <h2>2012</h2>
-                <p>Mists of Pandaria is released</p>
+            <div class="content" onclick="swapHistory('pandaria')">
+                <h2 id="h-pandaria">2012</h2>
+                <p id="expac-pandaria">Mists of Pandaria is released</p>
+                <p id="desc-pandaria">The Horde and Alliance have landed in a new zone: Pandaria.
+                    The fighting between these two factions awakens ancient evils in Pandaria.
+                    A new race is introduced, playable for both factions, the Pandaren.
+                    In addition, we see a new class, monks.
+                </p>
             </div>
             <div class="photo">
                <img src="{% static 'warcraftApp/pandariaMap.PNG' %}">
@@ -81,9 +108,13 @@
         </div>
 
         <div class="container left">
-            <div class="content">
-                <h2>2010</h2>
-                <p>Cataclysm is released</p>
+            <div class="content" onclick="swapHistory('cata')">
+                <h2 id="h-cata">2010</h2>
+                <p id="expac-cata">Cataclysm is released</p>
+                <p id="desc-cata">A new villain takes center stage: Deathwing.
+                    Deathwing is a Dragon Aspect, the leader of the black dragonflight, and corrupted by the Old Gods.
+                    Two new playable races were introduces: Goblins and Worgen, and several new zones discovered in Azeroth.
+                </p>
             </div>
             <div class="photo">
                <img src="{% static 'warcraftApp/maelstromMap.PNG' %}">
@@ -91,9 +122,13 @@
         </div>
 
         <div class="container right">
-            <div class="content">
-                <h2>2008</h2>
-                <p>Wrath of the Lich King is released</p>
+            <div class="content" onclick="swapHistory('wotlk')">
+                <h2 id="h-wotlk">2008</h2>
+                <p id="expac-wotlk">Wrath of the Lich King is released</p>
+                <p id="desc-wotlk">Enter the infamous Lich King, Arthas Menethil.
+                    Players return to Azeroth and explore a new zone, Northrend, while attempting to stop the Lich King from conquering Azeroth.
+                    Death Knights are the newest class introduced in WOTLK.
+                </p>
             </div>
             <div class="photo">
                <img src="{% static 'warcraftApp/northrendMap.PNG' %}">
@@ -101,9 +136,12 @@
         </div>
 
         <div class="container left">
-            <div class="content">
-                <h2>2007</h2>
-                <p>The Burning Crusade is released</p>
+            <div class="content" onclick="swapHistory('tbc')">
+                <h2 id="h-tbc">2007</h2>
+                <p id="expac-tbc">The Burning Crusade is released</p>
+                <p id="desc-tbc">WoW's first expansion pack.
+                    The Burning Crusade took players away from Azeroth to a new world - the Outlands.
+                    The Burning Crusade also introduced 2 new races, Blood Elves and Draenei. </p>
             </div>
             <div class="photo">
                <img src="{% static 'warcraftApp/outlandMap.PNG' %}">
@@ -111,9 +149,13 @@
         </div>
 
         <div class="container right">
-            <div class="content">
-                <h2>2004</h2>
-                <p>WoW (Classic) is released</p>
+            <div class="content" onclick="swapHistory('vanilla')">
+                <h2 id="h-vanilla">2004</h2>
+                <p id="expac-vanilla">WoW (Vanilla) is released</p>
+                <p id="desc-vanilla">The base game for World of Warcraft.
+                    Classic or Vanilla WoW introduces 8 races, 9 classes, and 2 major zones: Eastern Kingdoms and Kalimdor.
+                    This is when players see the world of Azeroth for the first time.
+                </p>
             </div>
             <div class="photo">
                <img src="{% static 'warcraftApp/kalimdorMap.PNG' %}">
@@ -123,8 +165,10 @@
     </div>
 
 </body>
+<script src="{% static 'warcraftApp/history.js' %}"></script>
 
 <footer>
 </footer>
+
 
 </html>

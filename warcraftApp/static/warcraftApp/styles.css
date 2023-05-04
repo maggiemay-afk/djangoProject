@@ -95,3 +95,8 @@ img {
     font-size: 2em;
     margin-bottom: 0;
 }
+
+#desc-dragon, #desc-shadow, #desc-bfa, #desc-legion, #desc-wod, #desc-pandaria, #desc-cata, #desc-wotlk, #desc-tbc, #desc-vanilla {
+    display: none;
+}
+

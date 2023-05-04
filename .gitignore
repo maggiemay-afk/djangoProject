@@ -1,9 +1,19 @@
+# Django #
 *.log
 *.pot
 *.pyc
-*.py[cod]
-local_settings.pyc
-__pycache__/
-.env
+__pycache__
 db.sqlite3
-settings.py
+media
+.env
+
+# Pycharm #
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# Python #
+*.py[cod]
+*$py.class
