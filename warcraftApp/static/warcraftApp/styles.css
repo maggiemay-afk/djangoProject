@@ -8,14 +8,44 @@ body {
 .navbar {
     background-color: #654321;
     padding: 10px;
-    margin: 10px;
+    color: black;
 }
 
+.faction {
+    max-width: 40px;
+    max-height: 50px;
+    float: left;
+}
+
+
 .nav-links {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+}
+
+.nav-links li {
+    float: right;
+}
+
+.nav-links li a {
+    display: block;
+    color: black;
+    text-align: center;
     text-decoration: none;
+    font-size: 1.2em;
+    padding: 16px;
+    font-family: Courier New, monospace;
+}
+
+.nav-links li a:hover {
+    background-color: #F4F0DB;
 }
 
 img {
+    padding-top: 20px;
     width: 100%;
     height: auto;
     opacity: 0.5;
@@ -84,6 +114,7 @@ img {
     background-color: #F4F0DB;
     position: relative;
     border-radius: 50px;
+    cursor: pointer;
 }
 
 .content p {
@@ -100,3 +131,33 @@ img {
     display: none;
 }
 
+.survey {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 25px;
+    border: 2px solid black;
+}
+.survey-left {
+    float: left;
+}
+.survey-right {
+    float: right;
+}
+.survey p {
+    font-size: 1.5em;
+}
+
+.button {
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    font-family: Courier New, monospace;
+    font-size: 1.4em;
+
+}
+
+.button:hover{
+    background-color: #654321;
+}

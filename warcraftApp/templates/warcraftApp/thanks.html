@@ -9,12 +9,12 @@
 <body>
 
     <nav class="navbar">
-        <div class="nav-links">
-            <a href="{% url 'index' %}">Home</a>
-            <a href="{% url 'history' %}">History</a>
-            <a href="{% url 'survey' %}">Survey</a>
-            <a href="{% url 'about' %}">About</a>
-        </div>
+        <ul class="nav-links">
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'survey' %}">Survey</a></li>
+            <li><a href="{% url 'history' %}">History</a></li>
+            <li><a href="{% url 'index' %}">Home</a></li>
+        </ul>
     </nav>
 
     <h1>Thank you for completing the survey!</h1>

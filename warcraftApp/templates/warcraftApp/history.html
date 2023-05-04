@@ -12,13 +12,18 @@
     <h1>Greetings from Azeroth</h1>
 
     <nav class="navbar">
-        <div class="nav-links">
-            <a href="{% url 'index' %}">Home</a>
-            <a href="{% url 'history' %}">History</a>
-            <a href="{% url 'survey' %}">Survey</a>
-            <a href="{% url 'about' %}">About</a>
-        </div>
+        <img class="faction" src="{% static 'warcraftApp/alliance.jpg' %}">
+        <ul class="nav-links">
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'survey' %}">Survey</a></li>
+            <li><a href="{% url 'history' %}">History</a></li>
+            <li><a href="{% url 'index' %}">Home</a></li>
+        </ul>
     </nav>
+
+    <div>
+        <h2>Click on the cream buttons to learn more about each expansion</h2>
+    </div>
 
     <div class="timeline">
         <div class="container left">
@@ -27,7 +32,7 @@
                 <p id="expac-dragon">Dragonflight is released</p>
                 <p id="desc-dragon">The age of Dragons! WoW's most recent expansion
                     brings players to the home of dragons and a new zone, the Dragon Isles.
-                    Maybe some of Deathwing's corruption and destruction remains?
+                    Maybe some of Deathwing's corruption remains?
                     Players will also get a new playable race and class combination: the Dracthyr Evoker.
                 </p>
             </div>

@@ -11,41 +11,48 @@
     <h1>Greetings from Azeroth</h1>
 
     <nav class="navbar">
-        <div class="nav-links">
-            <a href="{% url 'index' %}">Home</a>
-            <a href="{% url 'history' %}">History</a>
-            <a href="{% url 'survey' %}">Survey</a>
-            <a href="{% url 'about' %}">About</a>
-        </div>
+        <ul class="nav-links">
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'survey' %}">Survey</a></li>
+            <li><a href="{% url 'history' %}">History</a></li>
+            <li><a href="{% url 'index' %}">Home</a></li>
+        </ul>
     </nav>
 
-    <h2>Do you play World of Warcraft?</h2>
-    <h2>If so, we want to hear from you!</h2>
-    <h3>Fill out our brief survey and submit your favorite in-game photo:</h3>
+    <div class="survey-heading">
+        <h3>Fill out our brief survey and submit your favorite in-game photo:</h3>
+    </div>
 
-    <form method="POST" action="{% url 'thanks' %}" enctype="multipart/form-data">
-        {% csrf_token %}
-        <div class="form-group">
-            <p>What's your character's name?</p>
-            {{ form.character_name }}
-        </div>
-        <div class="form-group">
-            <p>What's your favorite zone?</p>
-            {{ form.fav_zone }}
-        </div>
-        <div class="form-group">
-            <p>Submit any in-game photo:</p>
-            {{ form.image }}
-        </div>
-        <div class="form-group">
-            <p>Tell us about the image you chose:</p>
-            {{ form.image_description }}
-        </div>
-        <div class="form-group">
-            <input class="button" type="submit" value="Submit">
-        </div>
+    <div class="survey">
+         <form method="POST" action="{% url 'thanks' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+                 <div class="survey-left">
+                     <div class="form-group">
+                        <p>What's your character's name?</p>
+                        {{ form.character_name }}
+                    </div>
+                    <div class="form-group">
+                        <p>What's your favorite zone?</p>
+                        {{ form.fav_zone }}
+                    </div>
+                 </div>
+                 <div class="survey-right">
+                    <div class="form-group">
+                        <p>Submit any in-game photo:</p>
+                        {{ form.image }}
+                    </div>
+                    <div class="form-group">
+                        <p>Tell us about the image you chose:</p>
+                        {{ form.image_description }}
+                    </div>
+                 </div>
 
-    </form>
+            <div class="form-group">
+                <input class="button" type="submit" value="Submit">
+            </div>
+
+        </form>
+    </div>
 
 </body>
 
