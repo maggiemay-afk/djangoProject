@@ -27,16 +27,24 @@
     <h2 class="alt-heading">Thank you for completing the survey!<br>
         See what other users have been saying:</h2>
 
-    <ul class="survey-results">
-        {% for r in response %}
-            <p>&#8658; {{r.character_name}} said their favorite zone is {{r.fav_zone}}</p>
-        {% endfor %}
-    </ul>
+    <div class="thanks">
+        <div class="survey-results">
+             <ul>
+                {% for r in response %}
+                    <p>&#8658; {{r.character_name}} said their favorite zone is {{r.fav_zone}}</p>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="thanks-photo">
+             <img src="{% static 'warcraftApp/grizzlyhills2.PNG' %}" alt="photo of Grizzly Hills from Warcraft">
+        </div>
+    </div>
 
 </body>
 
 <footer>
-    <p> &copy;Copyright 2023<br>All Rights Reserved.</p>
+    <p>&copy; Copyright 2023<br>All Rights Reserved.</p>
     <p><a href="mailto:goazeroth@wow.com">Contact: goAzeroth@WoW.com</a></p>
     <a href="https://www.twitter.com" target="_blank"><img class="social" src="{% static 'warcraftApp/twitter-logo.PNG' %}" alt="twitter logo"></a>
     <a href="https://www.facebook.com" target="_blank"><img class="social" src="{% static 'warcraftApp/facebook-logo.PNG' %}" alt="facebook logo"></a>

@@ -198,15 +198,28 @@ img {
     margin-top: 10px;
     font-weight: bold;
     border-radius: 10px;
-
 }
 
-.button:hover{
+.button:hover {
     background-color: #E6CC80;
 }
 
-.survey-results {
+.thanks {
+    width: 90%;
     margin-top: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 100px;
+}
+
+.thanks-photo img {
+    opacity: 1;
+    float: left;
+    max-width: 300px;
+    margin-left: 90px;
+}
+
+.survey-results {
+    float: left;
 }
 
 .survey-results p {
@@ -214,7 +227,18 @@ img {
     text-align: left;
 }
 
+.intro {
+    margin-bottom: 100px;
+}
+
 .intro p {
     font-size: 1.3em;
-    margin-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
+
+.intro img {
+    opacity: 1;
+    width: 70%;
+}
+
