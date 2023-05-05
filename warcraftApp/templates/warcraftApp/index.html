@@ -12,21 +12,38 @@
     <h1>Greetings from Azeroth</h1>
 
     <nav class="navbar">
+        <img class="faction" src="{% static 'warcraftApp/alliance.png' %}">
+        <img class="faction" src="{% static 'warcraftApp/horde.jpg' %}">
+
         <ul class="nav-links">
             <li><a href="{% url 'about' %}">About</a></li>
             <li><a href="{% url 'survey' %}">Survey</a></li>
-            <li><a href="{% url 'history' %}">History</a></li>
+            <li><a href="{% url 'expansions' %}">Expansions</a></li>
             <li><a href="{% url 'index' %}">Home</a></li>
         </ul>
     </nav>
 
-    <img class="home-photo" src="{% static 'warcraftApp/wowMap.PNG' %}">
+    <img class="home-photo" src="{% static 'warcraftApp/nagrand.PNG' %}" alt="photo of Nagrand from Warcraft">
 
-    <p>im a paragraph</p>
+    <div class="alt-heading">
+        <h2>"If you find yourself alone, riding in green fields with the sun on your face, do not be troubled - for you are in Azeroth"</h2>
+    </div>
+
+    <div class="intro">
+        <p>Welcome to our fan-run informational website for all things World of Warcraft. <br>
+            Our goal is to provide history, lore, and other information for new or returning players.
+            Learn about the different expansions, submit photos, complete our survey, read about
+            gameplay, and watch videos about the history and lore of Warcraft.
+        </p>
+    </div>
 
 </body>
 
 <footer>
+    <p> &copy;Copyright 2023<br>All Rights Reserved.</p>
+    <p><a href="mailto:goazeroth@wow.com">Contact: goAzeroth@WoW.com</a></p>
+    <a href="https://www.twitter.com" target="_blank"><img class="social" src="{% static 'warcraftApp/twitter-logo.PNG' %}" alt="twitter logo"></a>
+    <a href="https://www.facebook.com" target="_blank"><img class="social" src="{% static 'warcraftApp/facebook-logo.PNG' %}" alt="facebook logo"></a>
 </footer>
 
 </html>

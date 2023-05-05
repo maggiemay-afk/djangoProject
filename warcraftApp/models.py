@@ -8,3 +8,4 @@ class SurveyModel(models.Model):
     image_description = models.CharField(max_length=200)
     image = models.ImageField(upload_to='warcraftApp/files/covers')
 
+

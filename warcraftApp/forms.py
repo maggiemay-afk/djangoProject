@@ -27,11 +27,9 @@ class SurveyForm(ModelForm):
             }),
             'image_description': TextInput(attrs={
                 'class': "form-control",
-                'style': 'height: 5em; width: 25em',
+                'style': 'font-size: x-large',
                 'size': '20',
-            }),
-            'image': FileInput(attrs={
-
+                'placeholder': '-'
             })
         }
 

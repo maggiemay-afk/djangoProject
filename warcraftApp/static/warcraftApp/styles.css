@@ -5,18 +5,38 @@ body {
     background-color: #795C34;
 }
 
-.navbar {
+footer {
     background-color: #654321;
-    padding: 10px;
+    margin-top: 200px;
+    padding: 5px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
     color: black;
 }
 
-.faction {
-    max-width: 40px;
-    max-height: 50px;
-    float: left;
+.social {
+    max-width: 30px;
+    max-height: 30px;
 }
 
+/* Navigation bar styling */
+.navbar {
+    background-color: #654321;
+    color: black;
+}
+
+/* Navbar logos */
+.faction {
+    max-width: 54px;
+    max-height: 54px;
+    float: left;
+    position: relative;
+    margin-left: 10px;
+
+}
 
 .nav-links {
     list-style-type: none;
@@ -28,6 +48,7 @@ body {
 
 .nav-links li {
     float: right;
+    display: inline-block;
 }
 
 .nav-links li a {
@@ -38,6 +59,7 @@ body {
     font-size: 1.2em;
     padding: 16px;
     font-family: Courier New, monospace;
+
 }
 
 .nav-links li a:hover {
@@ -45,18 +67,27 @@ body {
 }
 
 img {
-    padding-top: 20px;
     width: 100%;
     height: auto;
     opacity: 0.5;
 }
 
+/* Home page photo */
+.home-photo {
+    padding-top: 20px;
+}
+
+/* history page photos */
 .photo {
     max-width: 500px;
     max-height: 500px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
+}
+
+.history-heading {
+    font-style: italic;
 }
 
 .timeline {
@@ -117,6 +148,10 @@ img {
     cursor: pointer;
 }
 
+.content:hover {
+    border: 4px solid black;
+}
+
 .content p {
     font-size: 1.4em;
     margin-top: 0;
@@ -127,26 +162,31 @@ img {
     margin-bottom: 0;
 }
 
+/* Hide expansion descriptions by default */
 #desc-dragon, #desc-shadow, #desc-bfa, #desc-legion, #desc-wod, #desc-pandaria, #desc-cata, #desc-wotlk, #desc-tbc, #desc-vanilla {
     display: none;
 }
 
+.alt-heading {
+    background-color: #F4F0DB;
+    padding: 5px;
+    font-style: italic;
+}
+
 .survey {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     margin-left: 50px;
     margin-right: 50px;
+    margin-top: 50px;
     border-radius: 25px;
     border: 2px solid black;
+    background-color: #654321;
 }
-.survey-left {
-    float: left;
-}
-.survey-right {
-    float: right;
-}
+
 .survey p {
     font-size: 1.5em;
+    font-weight: bold;
 }
 
 .button {
@@ -155,9 +195,26 @@ img {
     height: 30px;
     font-family: Courier New, monospace;
     font-size: 1.4em;
+    margin-top: 10px;
+    font-weight: bold;
+    border-radius: 10px;
 
 }
 
 .button:hover{
-    background-color: #654321;
+    background-color: #E6CC80;
+}
+
+.survey-results {
+    margin-top: 40px;
+}
+
+.survey-results p {
+    font-size: 1.3em;
+    text-align: left;
+}
+
+.intro p {
+    font-size: 1.3em;
+    margin-top: 50px;
 }

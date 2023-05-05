@@ -11,17 +11,42 @@
     <h1>Greetings from Azeroth</h1>
 
     <nav class="navbar">
+        <img class="faction" src="{% static 'warcraftApp/alliance.png' %}">
+        <img class="faction" src="{% static 'warcraftApp/horde.jpg' %}">
+
         <ul class="nav-links">
             <li><a href="{% url 'about' %}">About</a></li>
             <li><a href="{% url 'survey' %}">Survey</a></li>
-            <li><a href="{% url 'history' %}">History</a></li>
+            <li><a href="{% url 'expansions' %}">Expansions</a></li>
             <li><a href="{% url 'index' %}">Home</a></li>
         </ul>
     </nav>
 
+    <img class="home-photo" src="{% static 'warcraftApp/halfhill.PNG' %}" alt="photo of Halfhill Market from Warcraft">
+
+    <div class="intro">
+        <p>
+
+        </p>
+
+    </div>
+
+    <div>
+        <h2 class="alt-heading">Here's more great resources we think you'll enjoy:</h2>
+    </div>
+
+    <div class="more-resources">
+        <iframe class="video" width="500" height="400" src="https://www.youtube.com/embed/EmhO1LldIQw"></iframe>
+        <iframe class="video" width="500" height="400" src="https://www.youtube.com/embed/vvrzZgZ2ZDw"></iframe>
+    </div>
+
 </body>
 
 <footer>
+    <p> &copy;Copyright 2023<br>All Rights Reserved.</p>
+    <p><a href="mailto:goazeroth@wow.com">Contact: goAzeroth@WoW.com</a></p>
+    <a href="https://www.twitter.com" target="_blank"><img class="social" src="{% static 'warcraftApp/twitter-logo.PNG' %}" alt="twitter logo"></a>
+    <a href="https://www.facebook.com" target="_blank"><img class="social" src="{% static 'warcraftApp/facebook-logo.PNG' %}" alt="facebook logo"></a>
 </footer>
 
 </html>

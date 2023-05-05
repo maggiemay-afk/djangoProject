@@ -5,24 +5,25 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="{% static 'warcraftApp/styles.css' %}">
-
 </head>
 <body>
 
     <h1>Greetings from Azeroth</h1>
 
     <nav class="navbar">
-        <img class="faction" src="{% static 'warcraftApp/alliance.jpg' %}">
+        <img class="faction" src="{% static 'warcraftApp/alliance.png' %}">
+        <img class="faction" src="{% static 'warcraftApp/horde.jpg' %}">
+
         <ul class="nav-links">
             <li><a href="{% url 'about' %}">About</a></li>
             <li><a href="{% url 'survey' %}">Survey</a></li>
-            <li><a href="{% url 'history' %}">History</a></li>
+            <li><a href="{% url 'expansions' %}">Expansions</a></li>
             <li><a href="{% url 'index' %}">Home</a></li>
         </ul>
     </nav>
 
-    <div>
-        <h2>Click on the cream buttons to learn more about each expansion</h2>
+    <div class="history-heading">
+        <h2>Click on the cream buttons to learn more about each expansion:</h2>
     </div>
 
     <div class="timeline">
@@ -37,7 +38,7 @@
                 </p>
             </div>
             <div class="photo">
-               <img src="{% static 'warcraftApp/dragonIslesMap.PNG' %}">
+               <img src="{% static 'warcraftApp/dragonIslesMap.PNG' %}" alt="Map of the Dragon Isles from Warcraft">
             </div>
         </div>
 
@@ -51,7 +52,7 @@
                 </p>
             </div>
             <div class="photo">
-               <img src="{% static 'warcraftApp/shadowlandsMap.PNG' %}">
+               <img src="{% static 'warcraftApp/shadowlandsMap.PNG' %}" alt="Map of the Shadowlands from Warcraft">
             </div>
         </div>
 
@@ -65,7 +66,7 @@
                 </p>
             </div>
              <div class="photo">
-               <img src="{% static 'warcraftApp/kulTirasMap.PNG' %}">
+               <img src="{% static 'warcraftApp/kulTirasMap.PNG' %}" alt="Map of Kul Tiras from Warcraft">
             </div>
         </div>
 
@@ -79,7 +80,7 @@
                 </p>
             </div>
             <div class="photo">
-               <img src="{% static 'warcraftApp/brokenIslesMap.PNG' %}">
+               <img src="{% static 'warcraftApp/brokenIslesMap.PNG' %}" alt="Map of the Broken Isles from Warcraft">
             </div>
         </div>
 
@@ -93,7 +94,7 @@
                 </p>
             </div>
             <div class="photo">
-               <img src="{% static 'warcraftApp/draenorMap.PNG' %}">
+               <img src="{% static 'warcraftApp/draenorMap.PNG' %}" alt="Map of Draenor from Warcraft">
             </div>
         </div>
 
@@ -108,7 +109,7 @@
                 </p>
             </div>
             <div class="photo">
-               <img src="{% static 'warcraftApp/pandariaMap.PNG' %}">
+               <img src="{% static 'warcraftApp/pandariaMap.PNG' %}" alt="Map of Pandaria from Warcraft">
             </div>
         </div>
 
@@ -122,7 +123,7 @@
                 </p>
             </div>
             <div class="photo">
-               <img src="{% static 'warcraftApp/maelstromMap.PNG' %}">
+               <img src="{% static 'warcraftApp/maelstromMap.PNG' %}" alt="Map of the Maelstrom from Warcraft">
             </div>
         </div>
 
@@ -136,7 +137,7 @@
                 </p>
             </div>
             <div class="photo">
-               <img src="{% static 'warcraftApp/northrendMap.PNG' %}">
+               <img src="{% static 'warcraftApp/northrendMap.PNG' %}" alt="Map of Northrend from Warcraft">
             </div>
         </div>
 
@@ -149,7 +150,7 @@
                     The Burning Crusade also introduced 2 new races, Blood Elves and Draenei. </p>
             </div>
             <div class="photo">
-               <img src="{% static 'warcraftApp/outlandMap.PNG' %}">
+               <img src="{% static 'warcraftApp/outlandMap.PNG' %}" alt="Map of Outlands from Warcraft">
             </div>
         </div>
 
@@ -163,7 +164,7 @@
                 </p>
             </div>
             <div class="photo">
-               <img src="{% static 'warcraftApp/kalimdorMap.PNG' %}">
+               <img src="{% static 'warcraftApp/kalimdorMap.PNG' %}" alt="Map of Kalimdor from Warcraft">
             </div>
         </div>
 
@@ -173,7 +174,10 @@
 <script src="{% static 'warcraftApp/history.js' %}"></script>
 
 <footer>
+    <p> &copy;Copyright 2023<br>All Rights Reserved.</p>
+    <p><a href="mailto:goazeroth@wow.com">Contact: goAzeroth@WoW.com</a></p>
+    <a href="https://www.twitter.com" target="_blank"><img class="social" src="{% static 'warcraftApp/twitter-logo.PNG' %}" alt="twitter logo"></a>
+    <a href="https://www.facebook.com" target="_blank"><img class="social" src="{% static 'warcraftApp/facebook-logo.PNG' %}" alt="facebook logo"></a>
 </footer>
-
 
 </html>

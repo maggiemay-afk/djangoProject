@@ -1,6 +1,7 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from .forms import SurveyForm
+from .models import SurveyModel
 
 
 # Create your views here.
@@ -12,8 +13,8 @@ def about(request):
     return render(request, "warcraftApp/about.html")
 
 
-def history(request):
-    return render(request, "warcraftApp/history.html")
+def expansions(request):
+    return render(request, "warcraftApp/expansions.html")
 
 
 def survey(request):
@@ -22,7 +23,7 @@ def survey(request):
 
         if form.is_valid():
             form.save()
-        return redirect(index)
+        return redirect(thanks)
 
     else:
         form = SurveyForm()
@@ -31,4 +32,5 @@ def survey(request):
 
 
 def thanks(request):
-    return render(request, "warcraftApp/thanks.html")
+    response = SurveyModel.objects.all()
+    return render(request, "warcraftApp/thanks.html", {"response": response})

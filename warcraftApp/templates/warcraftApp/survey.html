@@ -11,52 +11,51 @@
     <h1>Greetings from Azeroth</h1>
 
     <nav class="navbar">
+        <img class="faction" src="{% static 'warcraftApp/alliance.png' %}">
+        <img class="faction" src="{% static 'warcraftApp/horde.jpg' %}">
+
         <ul class="nav-links">
             <li><a href="{% url 'about' %}">About</a></li>
             <li><a href="{% url 'survey' %}">Survey</a></li>
-            <li><a href="{% url 'history' %}">History</a></li>
+            <li><a href="{% url 'expansions' %}">Expansions</a></li>
             <li><a href="{% url 'index' %}">Home</a></li>
         </ul>
     </nav>
 
-    <div class="survey-heading">
-        <h3>Fill out our brief survey and submit your favorite in-game photo:</h3>
+    <img class="home-photo" src="{% static 'warcraftApp/dunmorogh.PNG' %}" alt="photo of Dun Morogh from Warcraft">
+
+    <div class="alt-heading">
+        <h2>Fill out our survey and submit your favorite in-game photo:</h2>
     </div>
 
-    <div class="survey">
-         <form method="POST" action="{% url 'thanks' %}" enctype="multipart/form-data">
-            {% csrf_token %}
-                 <div class="survey-left">
-                     <div class="form-group">
-                        <p>What's your character's name?</p>
-                        {{ form.character_name }}
-                    </div>
-                    <div class="form-group">
-                        <p>What's your favorite zone?</p>
-                        {{ form.fav_zone }}
-                    </div>
-                 </div>
-                 <div class="survey-right">
-                    <div class="form-group">
-                        <p>Submit any in-game photo:</p>
-                        {{ form.image }}
-                    </div>
-                    <div class="form-group">
-                        <p>Tell us about the image you chose:</p>
-                        {{ form.image_description }}
-                    </div>
-                 </div>
 
-            <div class="form-group">
-                <input class="button" type="submit" value="Submit">
-            </div>
+     <form class="survey" method="POST" action="{% url 'survey' %}" enctype="multipart/form-data">
+         {% csrf_token %}
+         <p>What's your character's name?</p>
+             {{ form.character_name }}
 
-        </form>
-    </div>
+         <p>What's your favorite zone?</p>
+             {{ form.fav_zone }}
+
+         <p>Submit any in-game photo:</p>
+             {{ form.image }}
+
+         <p>Tell us about the image you chose:</p>
+             {{ form.image_description }}
+
+         <div>
+           <input class="button" type="submit" value="Submit">
+         </div>
+
+    </form>
 
 </body>
 
 <footer>
+    <p> &copy;Copyright 2023<br>All Rights Reserved.</p>
+    <p><a href="mailto:goazeroth@wow.com">Contact: goAzeroth@WoW.com</a></p>
+    <a href="https://www.twitter.com" target="_blank"><img class="social" src="{% static 'warcraftApp/twitter-logo.PNG' %}" alt="twitter logo"></a>
+    <a href="https://www.facebook.com" target="_blank"><img class="social" src="{% static 'warcraftApp/facebook-logo.PNG' %}" alt="facebook logo"></a>
 </footer>
 
 </html>
