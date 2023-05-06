@@ -1,53 +1,50 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="{% static 'warcraftApp/styles.css' %}">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Thank you!</title>
+        <link rel="stylesheet" href="{% static 'warcraftApp/styles.css' %}">
+    </head>
+    <body>
 
-    <h1>Greetings from Azeroth</h1>
+        <h1>Greetings from Azeroth</h1>
 
-    <nav class="navbar">
-        <img class="faction" src="{% static 'warcraftApp/alliance.png' %}">
-        <img class="faction" src="{% static 'warcraftApp/horde.jpg' %}">
+        <nav class="navbar">
+            <img class="faction" src="{% static 'warcraftApp/alliance.png' %}">
+            <img class="faction" src="{% static 'warcraftApp/horde.jpg' %}">
 
-        <ul class="nav-links">
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'survey' %}">Survey</a></li>
-            <li><a href="{% url 'expansions' %}">Expansions</a></li>
-            <li><a href="{% url 'index' %}">Home</a></li>
-        </ul>
-    </nav>
-
-    <img class="home-photo" src="{% static 'warcraftApp/stormsong2.PNG' %}" alt="photo of Stormsong Valley from Warcraft">
-
-    <h2 class="alt-heading">Thank you for completing the survey!<br>
-        See what other users have been saying:</h2>
-
-    <div class="thanks">
-        <div class="survey-results">
-             <ul>
-                {% for r in response %}
-                    <p>&#8658; {{r.character_name}} said their favorite zone is {{r.fav_zone}}</p>
-                {% endfor %}
+            <ul class="nav-links">
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'survey' %}">Survey</a></li>
+                <li><a href="{% url 'expansions' %}">Expansions</a></li>
+                <li><a href="{% url 'index' %}">Home</a></li>
             </ul>
+        </nav>
+
+        <img class="home-photo" src="{% static 'warcraftApp/stormsong2.PNG' %}" alt="photo of Stormsong Valley from Warcraft">
+
+        <h2 class="alt-heading">Thank you for completing the survey!<br>
+            See what other users have been saying:</h2>
+
+        <div class="thanks">
+            <div class="thanks-content">
+                 <ul>
+                    {% for r in response %}
+                        <p>&#8658; {{r.character_name}} said their favorite zone is {{r.fav_zone}}</p>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="thanks-content">
+                <img src="{% static 'warcraftApp/grizzlyhills2.PNG' %}" alt="photo of Grizzly Hills from Warcraft">
+            </div>
         </div>
+    </body>
 
-        <div class="thanks-photo">
-             <img src="{% static 'warcraftApp/grizzlyhills2.PNG' %}" alt="photo of Grizzly Hills from Warcraft">
-        </div>
-    </div>
-
-</body>
-
-<footer>
-    <p>&copy; Copyright 2023<br>All Rights Reserved.</p>
-    <p><a href="mailto:goazeroth@wow.com">Contact: goAzeroth@WoW.com</a></p>
-    <a href="https://www.twitter.com" target="_blank"><img class="social" src="{% static 'warcraftApp/twitter-logo.PNG' %}" alt="twitter logo"></a>
-    <a href="https://www.facebook.com" target="_blank"><img class="social" src="{% static 'warcraftApp/facebook-logo.PNG' %}" alt="facebook logo"></a>
-</footer>
-
+    <footer>
+        <p>&copy; Copyright 2023<br>All Rights Reserved.</p>
+        <p><a href="mailto:goazeroth@wow.com">Contact: goAzeroth@WoW.com</a></p>
+        <a href="https://www.twitter.com" target="_blank"><img class="social" src="{% static 'warcraftApp/twitter-logo.PNG' %}" alt="twitter logo"></a>
+        <a href="https://www.facebook.com" target="_blank"><img class="social" src="{% static 'warcraftApp/facebook-logo.PNG' %}" alt="facebook logo"></a>
+    </footer>
 </html>

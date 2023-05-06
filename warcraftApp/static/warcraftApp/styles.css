@@ -1,3 +1,8 @@
+/*
+    Name: Maggie Herms
+    File: styles.css
+    Last edit: 5/5/2023
+*/
 
 body {
     text-align: center;
@@ -5,6 +10,7 @@ body {
     background-color: #795C34;
 }
 
+/* Footer styling */
 footer {
     background-color: #654321;
     margin-top: 200px;
@@ -17,6 +23,7 @@ footer a {
     color: black;
 }
 
+/* social media logos */
 .social {
     max-width: 30px;
     max-height: 30px;
@@ -66,28 +73,29 @@ footer a {
     background-color: #F4F0DB;
 }
 
+/* Photo styling */
 img {
     width: 100%;
     height: auto;
     opacity: 0.5;
 }
-
 /* Home page photo */
 .home-photo {
     padding-top: 20px;
 }
 
-/* history page photos */
+/* Expansion page styling */
+.history-heading {
+    font-style: italic;
+}
+
+/* Expansion page photos */
 .photo {
     max-width: 500px;
     max-height: 500px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-}
-
-.history-heading {
-    font-style: italic;
 }
 
 .timeline {
@@ -167,6 +175,8 @@ img {
     display: none;
 }
 
+/* Survey Page Styling */
+/* Alternative heading */
 .alt-heading {
     background-color: #F4F0DB;
     padding: 5px;
@@ -204,41 +214,46 @@ img {
     background-color: #E6CC80;
 }
 
+/* Thank you page styling */
 .thanks {
     width: 90%;
-    margin-top: 40px;
+    margin-top: 50px;
     margin-bottom: 40px;
-    padding-bottom: 100px;
 }
-
-.thanks-photo img {
+.thanks-content {
+    display: inline-block;
+    vertical-align: middle;
+}
+.thanks-content img {
     opacity: 1;
-    float: left;
-    max-width: 300px;
-    margin-left: 90px;
+    max-width: 400px;
+    padding-left: 50px;
 }
 
-.survey-results {
-    float: left;
-}
-
-.survey-results p {
+.thanks-content p {
     font-size: 1.3em;
     text-align: left;
 }
 
+/* Text/Paragraph styling across website */
 .intro {
-    margin-bottom: 100px;
+    margin-bottom: 150px;
+}
+
+.intro h2 {
+    margin-top: 30px;
 }
 
 .intro p {
     font-size: 1.3em;
-    padding-left: 30px;
-    padding-right: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 40px;
 }
 
+/* about page photos */
 .intro img {
-    opacity: 1;
+    opacity: 0.8;
     width: 70%;
 }
 
